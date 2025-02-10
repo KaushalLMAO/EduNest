@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Primary: Deep Blue (#0056b3) – Represents trust and professionalism.
-Secondary: Vibrant Green (#00b894) – Symbolizes growth and learning.
-Accent: Soft White (#f5f5f5) – Keeps it clean and readable */
+
 #login {
   display: flex;
   justify-content: center;

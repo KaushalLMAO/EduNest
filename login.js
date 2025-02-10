@@ -36,13 +36,18 @@ login.addEventListener("click", function () {
   let storedEmail = localStorage.getItem("email");
   let storedPw = localStorage.getItem("password");
   let storedName = localStorage.getItem("name");
-  if (
+
+  if (email.value == "" || password.value == "" || names.value == "") {
+    alert("Please fill all the fields");
+  } else if (password.value !== storedPw || email.value !== storedEmail) {
+    alert("Invalid email or password");
+  } else if (
     email.value == storedEmail &&
     password.value == storedPw &&
     names.value == storedName
   ) {
-    alert("Welcome " + storedName);
     window.location.href = "index.html";
     localStorage.setItem("loggedin", true);
+    count = 0;
   }
 });

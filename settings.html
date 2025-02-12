@@ -6,24 +6,61 @@
     <title>EduNest-Settings</title>
     <link rel="shortcut icon" href="EduNest.png" type="image/x-icon" />
     <link rel="stylesheet" href="settings.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <main>
       <div id="sidebar">
         <div id="head">
-            <img src="EduNest.png" alt="EduNest" id="logo" />
-            <h2>EduNest</h2>
+          <img src="EduNest.png" alt="EduNest" id="logo" />
+          <h2>EduNest</h2>
+        </div>
+        <div id="profile">
+          <i class="fa-solid fa-user"></i>
+          <p>Profile Settings</p>
+        </div>
+        <div id="upgrade">
+          <i class="fa-solid fa-arrow-up"></i>
+          <p>Upgrade Plan</p>
+        </div>
+        <div id="security">
+          <i class="fa-solid fa-lock"></i>
+          <p>Security</p>
         </div>
         <div id="Return">
-            <i class="fa-solid fa-house"></i>
-        <a href="index.html"><p>Return To Home</p></a>
-        </div> 
-        
+          <i class="fa-solid fa-house"></i>
+          <a href="index.html"><p>Return To Home</p></a>
+        </div>
+        <div id="signout">
+          <i class="fa-solid fa-sign-out"></i>
+          <p>Sign Out</p>
+        </div>
+        <div id="delete">
+          <i class="fa-solid fa-trash"></i>
+          <p>Delete Account</p>
         </div>
       </div>
-      <div id="contents"></div>
+      <div id="contents">
+        <div class="change">
+          <section id="labels">
+            <label for="name">Change Name :</label>
+            <label for="email">Change Email :</label>
+            <label for="password">Change Password :</label>
+            <label for="profile">Change Profile:</label>
+          </section>
+          <section id="inputs">
+            <input type="text" id="name" />
+            <input type="email" id="email" />
+            <input type="password" id="password" />
+            <input type="file" id="profile" />
+          </section>
+          `
+        </div>
+      </div>
     </main>
+    <script src="settings.js"></script>
   </body>
 </html>

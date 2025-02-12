@@ -1,5 +1,5 @@
 //dom
-localStorage.setItem("loggedin", true);
+
 let email = document.getElementById("email");
 let names = document.getElementById("names");
 let password = document.getElementById("pw");

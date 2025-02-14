@@ -70,7 +70,7 @@ i {
 .change {
   display: flex;
   flex-direction: row;
-  height: 70px;
+  height: 200px;
 }
 #labels,
 #inputs {
@@ -78,8 +78,39 @@ i {
   flex-direction: column;
   margin-right: 20px;
   padding-top: 20px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 input {
   border-radius: 5px;
+}
+#save,
+#cancel,
+#show {
+  height: 30px;
+  width: 7%;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #f5f5f5;
+  background-color: #00b894;
+  border: 1px solid #f5f5f5;
+}
+#save:hover,
+#cancel:hover,
+#show:hover {
+  background-color: #f5f5f5;
+  color: #00b894;
+}
+#save:active,
+#cancel:active,
+#show:active {
+  background-color: #0056b3;
+  color: #f5f5f5;
+}
+#preview {
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  border: 2px solid #00b894;
+  width: 100px;
+  height: 100px;
 }

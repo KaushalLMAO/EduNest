@@ -1,3 +1,6 @@
+let emailp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let namep = /^[a-zA-Z]+$/;
+
 //logout && delete
 const deletess = document.querySelector("#delete");
 if (deletess) {
@@ -50,14 +53,33 @@ if (profilesettings) {
           <button type="button" id="cancel">Cancel</button>
           <button type="button" id="show">Preview Profile</button>
         </div>`;
+      document.getElementById("show").addEventListener("click", () => {
+        alert("You cannot perform this at the moment");
+      });
+      document.getElementById("save").addEventListener("click", () => {
+        const newName = document.getElementById("name").value;
+        const newEmail = document.getElementById("email").value;
+        const newPassword = document.getElementById("password").value;
+
+        if (newName === "" && newEmail === "" && newPassword === "") {
+          alert("Please fill all the fields");
+        } else {
+          if (newName.match(namep)) {
+            localStorage.setItem("name", newName);
+          } else if (newName === "") {
+            return;
+          } else {
+            alert("Name cannot contain spaces and special characters");
+          }
+          if (newEmail.match(emailp)) {
+            localStorage.setItem("email", newEmail);
+          } else if (newEmail === "") {
+            return;
+          } else {
+            alert("Invalid email format");
+          }
+        }
+      });
     }
   });
 }
-let prevprofile = document.getElementById("show");
-prevprofile.addEventListener("click", () => {
-  alert("You cannot perform this at the moment");
-});
-let save = document.getElementById("save");
-save.addEventListener("click", () => {
-  alert("You cannot perform this at the moment");
-});

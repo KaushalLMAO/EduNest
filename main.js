@@ -1,6 +1,5 @@
 //reset home
 let homelogo = document.querySelector("#stnav");
-
 homelogo.addEventListener("click", function () {
   window.location.href = "index.html";
 });

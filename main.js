@@ -18,4 +18,3 @@ if (logdetail == "true") {
 //profile
 let profile = document.querySelector("#user");
 profile.setAttribute("src", localStorage.getItem("profile"));
-//can be changed through settings later

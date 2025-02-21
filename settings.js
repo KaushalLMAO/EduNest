@@ -110,3 +110,53 @@ if (profilesettings) {
     }
   });
 }
+// upgrade
+let upgrade = document.body.querySelector("#upgrade");
+if (upgrade) {
+  upgrade.addEventListener("click", (e) => {
+    if (localStorage.getItem("email") === null) {
+      alert("Please login first");
+    } else {
+      content.innerHTML = `<div id="pricing">
+          <div id="free">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe-UjggpyNrpzG-ZfKD7d5UvvaQI45x4GkTg&s"
+              alt="Free"
+              id="freeimg"
+            />
+            <br />
+            <h3>Free</h3>
+            <p>Basic features for all users✔</p>
+            <p>Unlimited access to all courses✔</p>
+
+            <p>Access to all assignments✔</p>
+            <p>Access to all projects❌</p>
+            <p>Access to all webinars❌</p>
+            <p>Access to all workshops❌</p>
+            <p>Access to all events❌</p>
+            <p>Access to all quizzes✔</p>
+            <br />
+            <button>In Use</button>
+          </div>
+          <div id="pro">
+            <img
+              src="https://t3.ftcdn.net/jpg/04/75/79/00/360_F_475790067_rfgcv3o1UuCbDxyPOb0RoZZd7a8TpGar.jpg"
+              alt="Pro"
+              id="freeimg"
+            />
+            <h2>Pro</h2>
+            <p>Advanced features for professionals ✔</p>
+            <p>Unlimited access to all courses ✔</p>
+            <p>Access to all quizzes✔</p>
+            <p>Access to all assignments✔</p>
+            <p>Access to all projects✔</p>
+            <p>Access to all webinars✔</p>
+            <p>Access to all workshops✔</p>
+            <p>Access to all events✔</p>
+            <br />
+            <button>Upgrade</button>
+          </div>
+        </div>`;
+    }
+  });
+}
